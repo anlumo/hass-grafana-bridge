@@ -1,0 +1,18 @@
+[package]
+name = "hass-grafana-bridge"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.0.18", features = ["derive", "env"] }
+env_logger = "0.9.1"
+futures-util = "0.3.25"
+log = "0.4.17"
+tokio = { version = "1.21.2", features = ["rt", "macros"] }
+tokio-tungstenite = "0.17.2"
+hass-rs = { git = "https://github.com/danrusei/hass-rs.git", rev = "9ec540b49b45f1addb72e1b4e8590103c630a52b", default_features = false, features = ["tokio-runtime"] }
+serde_json = "1.0.87"
+futures = "0.3.25"
+pharos = "0.5.3"
